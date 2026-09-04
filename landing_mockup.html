@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Mockup - Maansi Surve</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      background: #000;
+      font-family: 'DM Sans', sans-serif;
+      overflow-x: hidden; /* Allow vertical scrolling now */
+      scroll-behavior: smooth;
+    }
+
+    /* Hero Section takes full viewport height */
+    .hero-section {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Video Grid Container */
+    .video-grid-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      display: grid;
+      grid-template-columns: repeat(10, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 16px;
+      padding: 80px 24px 24px 24px; /* Top padding clears the nav bar */
+      box-sizing: border-box;
+      z-index: 1;
+    }
+
+    /* Individual Video Cards */
+    .video-card {
+      width: 100%;
+      height: 100%;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #111;
+      opacity: 0.4; /* Dim the videos heavily for a dark, immersive feel */
+      transition: opacity 0.5s ease;
+    }
+    
+    .video-card video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Grid Spans */
+    .span-2 { grid-column: span 2; }
+    .span-3 { grid-column: span 3; }
+    .span-4 { grid-column: span 4; }
+
+    /* Overlay Content */
+    .overlay-content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding-top: 25vh; /* Adjusted to move the larger title higher */
+      box-sizing: border-box; /* Ensures the padding doesn't push the height past 100vh */
+      text-align: center;
+      background: transparent;
+      pointer-events: none;
+    }
+
+    .hero-title {
+      font-family: 'Google Sans', 'Product Sans', 'Outfit', sans-serif;
+      font-size: clamp(80px, 16vw, 220px);
+      font-weight: 500;
+      color: #fff;
+      margin: 0 0 16px 0;
+      line-height: 1;
+      letter-spacing: -0.05em;
+    }
+
+    .kerning-v {
+      margin-left: 0.04em; /* Separates the 'v' from the 'r' slightly */
+    }
+
+    .hero-subtitle {
+      font-size: clamp(14px, 1.8vw, 20px);
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.9);
+      margin: 0 0 24px 0;
+      max-width: 650px;
+      line-height: 1.5;
+    }
+
+    .cta-container {
+      margin-top: auto;
+      margin-bottom: 8vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .cta-button {
+      pointer-events: auto; /* Re-enable clicks for the button */
+      background: #fff;
+      color: #000;
+      text-decoration: none;
+      padding: 16px 40px;
+      border-radius: 40px;
+      font-size: 18px;
+      font-weight: 500;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .cta-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+    
+    .scroll-arrow {
+      margin-top: 16px;
+      pointer-events: auto;
+      opacity: 0.7;
+      transition: opacity 0.2s, transform 0.2s;
+    }
+    
+    .scroll-arrow:hover {
+      opacity: 1;
+      transform: translateY(4px);
+    }
+    
+    /* Top and Bottom Gradients */
+    .top-fade {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 45vh;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.6) 35%, transparent 100%);
+      z-index: 5;
+      pointer-events: none;
+    }
+
+    .bottom-fade {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 20vh;
+      background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.5) 50%, transparent 100%);
+      z-index: 5;
+      pointer-events: none;
+    }
+
+    /* Mock Projects Section */
+    .mock-projects-section {
+      width: 100%;
+      min-height: 100vh;
+      background: #000; /* Changed to black for a truly seamless transition and dark feel */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'DM Sans', sans-serif;
+      padding: 60px;
+      box-sizing: border-box;
+    }
+    .mock-projects-content {
+      text-align: center;
+      max-width: 800px;
+    }
+    .mock-projects-content h2 {
+      font-size: 48px;
+      font-weight: 700;
+      color: #fff; /* White text for dark mode */
+      margin: 0 0 24px 0;
+      letter-spacing: -0.02em;
+    }
+    .mock-projects-content p {
+      font-size: 20px;
+      color: #aaa; /* Lighter text for dark mode */
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <div class="hero-section">
+    <!-- Navigation Header (Dark Mode) -->
+    <nav style="position:absolute;top:0;left:0;width:100%;z-index:20;padding:24px 40px;display:flex;align-items:center;justify-content:space-between;box-sizing:border-box;">
+      <div style="cursor:pointer;display:flex;align-items:center;">
+        <img src="assets/nav-star-logo.png" alt="Maansi Surve" style="height:28px;width:auto;display:block; filter: brightness(0) invert(1);" />
+      </div>
+      <div style="display:flex;align-items:center;gap:40px;font-size:16px;color:#fff;font-family:'DM Sans',sans-serif;font-weight:500;">
+        <span style="cursor:pointer; opacity:0.8; transition:opacity 0.2s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.8">work</span>
+        <span style="cursor:pointer; opacity:0.8; transition:opacity 0.2s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.8">play</span>
+        <span style="cursor:pointer; opacity:0.8; transition:opacity 0.2s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.8">about</span>
+        <span style="cursor:pointer; opacity:0.8; transition:opacity 0.2s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.8">resume</span>
+      </div>
+    </nav>
+
+    <!-- Background Video Grid -->
+  <div class="video-grid-container">
+    <!-- Top Row -->
+    <div class="video-card span-2">
+      <video src="assets/videos/A.mp4" autoplay loop muted playsinline></video>
+    </div>
+    <div class="video-card span-2">
+      <video src="assets/videos/B.mp4" autoplay loop muted playsinline></video>
+    </div>
+    <div class="video-card span-4">
+      <video src="assets/videos/F.mp4" autoplay loop muted playsinline></video>
+    </div>
+    <div class="video-card span-2">
+      <video src="assets/videos/D.mp4" autoplay loop muted playsinline></video>
+    </div>
+    
+    <!-- Bottom Row (Ordered H, C, E, G) -->
+    <div class="video-card span-2">
+      <video src="assets/videos/H.mp4" autoplay loop muted playsinline></video>
+    </div>
+    <div class="video-card span-3">
+      <video src="assets/videos/C.mp4" autoplay loop muted playsinline></video>
+    </div>
+    <div class="video-card span-2">
+      <video src="assets/videos/E.mp4" autoplay loop muted playsinline></video>
+    </div>
+    <div class="video-card span-3">
+      <video src="assets/videos/G.mp4" autoplay loop muted playsinline></video>
+    </div>
+  </div> <!-- End video-grid-container -->
+    
+  <div class="top-fade"></div>
+  <div class="bottom-fade"></div>
+
+  <!-- Foreground Overlay -->
+  <div class="overlay-content">
+    <h1 class="hero-title">Maansi Sur<span class="kerning-v">v</span>e</h1>
+    
+    <div class="cta-container">
+      <h2 class="hero-subtitle">Product Designer with experience across big tech <svg width="18" height="18" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg" style="display:inline-block; vertical-align:middle; margin-bottom:3px; margin-left:2px;"><rect x="1" y="1" width="9" height="9" fill="#f25022"/><rect x="11" y="1" width="9" height="9" fill="#7fba00"/><rect x="1" y="11" width="9" height="9" fill="#00a4ef"/><rect x="11" y="11" width="9" height="9" fill="#ffb900"/></svg>, enterprise SaaS, B2B, and nonprofit design in Seattle & the Bay Area.</h2>
+      <a href="#projects" class="cta-button">View projects</a>
+      <a href="#projects" class="scroll-arrow">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </a>
+    </div>
+  </div>
+
+</div> <!-- End hero-section -->
+
+  <!-- Mock Projects Section Below -->
+  <div id="projects" class="mock-projects-section">
+    <div class="mock-projects-content">
+      <h2>My Projects</h2>
+      <p>This is where your existing portfolio grid will seamlessly sit. When we integrate this into your main file, scrolling down (or clicking the button) will reveal your actual case studies.</p>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,546 @@
+          <!-- SmartCart -->
+          <div class="project-card-container" style="cursor:pointer;" onclick="{{openSmartCart}}">
+            <div class="project-card-image-wrap" style="background:#EDEBF6;">
+              <img class="project-card-image" src="assets/smartcart.jpg" alt="SmartCart" />
+              <div class="project-card-overlay">
+                <div style="font-family:'Newsreader',Georgia,serif;font-style:italic;font-size:28px;color:#fff;line-height:1.12;margin-bottom:12px;">SmartCart</div>
+                <div style="font-size:15px;line-height:1.55;color:rgba(255,255,255,0.84);max-width:88%;">A shared shopping app supporting roommate communication around purchases and splitting.</div>
+              </div>
+            </div>
+            <div style="display:flex;justify-content:space-between;gap:24px;margin-top:18px;">
+              <div style="font-size:19px;font-weight:700;line-height:1.3;max-width:340px;">SmartCart</div>
+              <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.1em;color:#aeaeae;text-transform:uppercase;text-align:right;max-width:200px;line-height:1.5;">Lead Designer</div>
+            </div>
+          </div>
+        <!-- CASE STUDY: SMARTCART -->
+        <sc-if value="{{activeProject === 'smartcart'}}">
+          <div style="padding: 92px 56px 80px; max-width: 1040px; margin: 0 auto;">
+            <!-- Project Logo Header -->
+            <div style="display:flex; align-items:center; gap:16px; margin-bottom:24px; margin-top:20px;">
+              <img src="assets/smartcart-logo.png" style="height:52px; width:auto; display:block;" alt="SmartCart" />
+            </div>
+            <div style="font-family:'Newsreader',Georgia,serif; font-style:italic; font-size:22px; color:#6e6e6e; margin-bottom:32px; font-weight:500; line-height:1.3;">
+              Designing a unified mobile workspace to eliminate the social friction and fragmentation of roommate expense coordination.
+            </div>
+            
+            <!-- Metadata Grid -->
+            <div style="display:grid; grid-template-columns: repeat(4, 1fr); gap: 24px; border-bottom:1px solid #ECECEC; padding-bottom:32px; margin-bottom:40px;">
+              <div>
+                <div class="modal-meta-label">Timeline</div>
+                <div class="modal-meta-value">12 Weeks</div>
+              </div>
+              <div>
+                <div class="modal-meta-label">Role</div>
+                <div class="modal-meta-value">Product Designer</div>
+              </div>
+              <div>
+                <div class="modal-meta-label">Team</div>
+                <div class="modal-meta-value">Jeff K. (PM &amp; Eng)</div>
+              </div>
+              <div>
+                <div class="modal-meta-label">Tools</div>
+                <div class="modal-meta-value" style="font-size: 14.5px;">
+                  Figma, FigJam, Lucidchart
+                </div>
+              </div>
+            </div>
+
+            <!-- Hero Image -->
+            <div style="background:#EDEBF6; border-radius:20px; overflow:hidden; margin-bottom:44px;">
+              <img src="assets/smartcart-grid.png" style="width:100%; height:auto; display:block;" alt="SmartCart perspective mockups" />
+            </div>
+
+            <!-- Recruiter Summary Card (30-second read) -->
+            <div style="background:#fbfbfe; border: 1px solid #ECECFE; border-radius:16px; padding:28px; margin-bottom:48px;">
+              <div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#a0a0a0; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:12px;">Recruiter Quick Summary (30-Sec Read)</div>
+              <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:28px;">
+                <div>
+                  <div style="font-size:14px; font-weight:700; color:#1a1a1a; margin-bottom:6px;">The Challenge</div>
+                  <div style="font-size:14px; line-height:1.55; color:#5e5e5e;">
+                    Roommates face constant stress managing shared household items and expenses. While Splitwise calculates debts, it remains disconnected from shopping lists and lists. This results in fragmented tools, forgotten receipts, and awkward check-ins.
+                  </div>
+                </div>
+                <div>
+                  <div style="font-size:14px; font-weight:700; color:#1a1a1a; margin-bottom:6px;">The Strategy &amp; Outcome</div>
+                  <div style="font-size:14px; line-height:1.55; color:#5e5e5e;">
+                    I designed <strong>SmartCart</strong>: a single-source mobile application managing the full lifecycle (Need → Buy → Split → Settle). We lowered cognitive load by introducing progressive disclosure and eliminated cohabitant tension through automated, neutral calculations.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+              <!-- 1. PROBLEM SPACE -->
+              <div style="margin-bottom: 56px;">
+                <div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#ffbad3; font-weight:700; margin-bottom:8px; text-transform:uppercase; letter-spacing:0.08em;">PROBLEM SPACE</div>
+                <h3 style="font-size: 22px; font-weight: 700; color: #1a1a1a; margin-top: 0; margin-bottom: 12px; line-height: 1.3;">01. The Roommate Coordination Tax</h3>
+                <p style="font-size:15px; font-weight:600; color:#333; line-height:1.5; margin:0 0 24px;">
+                  Unifying the fragmented Need → Buy → Split → Settle co-living lifecycle into a single collaborative workspace.
+                </p>
+                <div style="font-size:16.5px; line-height:1.75; color:#4a4a4a;">
+                  <p style="margin:0 0 20px;">
+                    Coordinating a shared home is notoriously messy. Roommates regularly purchase joint supplies (toilet paper, groceries, oil) and split the costs. Through early discovery, we realized that the primary source of frustration isn't calculating the math; it's the <strong>extreme workflow fragmentation</strong>.
+                  </p>
+                  <p style="margin:0 0 28px;">
+                    Roommates currently navigate a disjointed ecosystem to complete a single task loop:
+                  </p>
+                  
+                  <!-- Fragmented Lifecycle Box -->
+                  <div style="background:#FFF8FA; border:1px solid #FFEDF1; border-radius:16px; padding:24px; margin-bottom:32px; display:grid; grid-template-columns:repeat(4, 1fr); gap:16px; text-align:center;">
+                    <div>
+                      <div style="font-size:20px; margin-bottom:4px;">📝</div>
+                      <div style="font-weight:700; font-size:13.5px; color:#1a1a1a; margin-bottom:2px;">1. NEED</div>
+                      <div style="font-size:11px; color:#888;">Shared lists in Apple Notes</div>
+                    </div>
+                    <div>
+                      <div style="font-size:20px; margin-bottom:4px;">💬</div>
+                      <div style="font-weight:700; font-size:13.5px; color:#1a1a1a; margin-bottom:2px;">2. BUY</div>
+                      <div style="font-size:11px; color:#888;">Coordinate via Text Messages</div>
+                    </div>
+                    <div>
+                      <div style="font-size:20px; margin-bottom:4px;">📊</div>
+                      <div style="font-weight:700; font-size:13.5px; color:#1a1a1a; margin-bottom:2px;">3. SPLIT</div>
+                      <div style="font-size:11px; color:#888;">Track expenses in Splitwise</div>
+                    </div>
+                    <div>
+                      <div style="font-size:20px; margin-bottom:4px;">💸</div>
+                      <div style="font-weight:700; font-size:13.5px; color:#1a1a1a; margin-bottom:2px;">4. SETTLE</div>
+                      <div style="font-size:11px; color:#888;">Send payouts via Venmo</div>
+                    </div>
+                  </div>
+                  
+                  <p style="margin:0 0 28px;">
+                    Because these tools are disconnected, cohabitants consistently forget to log receipts, lose track of who purchased what, and face uncomfortable money talks. <strong>SmartCart unifies this lifecycle into a single workspace.</strong>
+                  </p>
+                  
+                  <!-- Comparison Card -->
+                  <div style="background:#fcfcfc; border:1px solid #ECECEC; border-radius:16px; padding:24px; display:grid; grid-template-columns: 1fr 1fr; gap:24px; box-shadow:0 4px 12px rgba(0,0,0,0.01);">
+                    <div>
+                      <div style="font-weight:700; color:#ffbad3; font-size:12px; font-family:'JetBrains Mono',monospace; margin-bottom:12px; text-transform:uppercase; letter-spacing:0.04em;">Before (Fragmented)</div>
+                      <ul style="padding-left:18px; margin:0; font-size:13.5px; line-height:1.65; color:#5e5e5e;">
+                        <li>Shopping lists scattered in Apple Notes</li>
+                        <li>Receipt details get lost in group chats</li>
+                        <li>Manual, tedious logging in Splitwise</li>
+                        <li>Awkward follow-up payouts via Venmo</li>
+                      </ul>
+                    </div>
+                    <div style="border-left:1px solid #ECECEC; padding-left:24px;">
+                      <div style="font-weight:700; color:#1a1a1a; font-size:12px; font-family:'JetBrains Mono',monospace; margin-bottom:12px; text-transform:uppercase; letter-spacing:0.04em;">After (SmartCart Unified)</div>
+                      <ul style="padding-left:18px; margin:0; font-size:13.5px; line-height:1.65; color:#5e5e5e;">
+                        <li><strong>Real-time</strong> collaborative list syncing</li>
+                        <li><strong>Auto-calculating</strong> splits at shopping checkout</li>
+                        <li><strong>One-tap</strong> expense logging &amp; balance sync</li>
+                        <li>Neutral, automated settlements &amp; balance tracking</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <!-- 2. DESIGN PROCESS -->
+              <div style="margin-bottom: 56px;">
+                <div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#ffbad3; font-weight:700; margin-bottom:8px; text-transform:uppercase; letter-spacing:0.08em;">DESIGN PROCESS</div>
+                <h3 style="font-size: 22px; font-weight: 700; color: #1a1a1a; margin-top: 0; margin-bottom: 12px; line-height: 1.3;">02. Design Process &amp; Iteration</h3>
+                <p style="font-size:15px; font-weight:600; color:#333; line-height:1.5; margin:0 0 24px;">
+                  Following an iterative, human-centered lifecycle to match roommate habits rather than imposing rigid linear workflows.
+                </p>
+                <div style="font-size:16.5px; line-height:1.75; color:#4a4a4a;">
+                  <p style="margin:0 0 24px;">
+                    Instead of a rigid linear pipeline, we followed an iterative human-centered process to ensure our final system aligned with actual co-living workflows:
+                  </p>
+                  
+                  <!-- Process Diagram Image -->
+                  <div style="background:#ffffff; border-radius:20px; overflow:hidden; border:1px solid #ECECEC; padding:32px 24px; margin-bottom:32px; text-align:center; box-shadow:0 4px 16px rgba(0,0,0,0.02);">
+                    <img src="assets/smartcart-process-v2.png" style="width:100%; max-width:800px; height:auto; display:inline-block;" alt="Design Process Diagram" />
+                  </div>
+                  
+                  <!-- Process Cards -->
+                  <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:16px; margin-bottom:12px;">
+                    <div style="background:#f9f9f9; padding:18px; border-radius:12px; border:1px solid #F0F0F0;">
+                      <div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#ffbad3; font-weight:700; margin-bottom:6px;">DISCOVER &amp; DEFINE</div>
+                      <div style="font-size:13px; line-height:1.45; color:#5e5e5e;">Surveyed 31 cohabitants, scraped Reddit threads, and mapped competitive landscape to discover coordination gaps.</div>
+                    </div>
+                    <div style="background:#f9f9f9; padding:18px; border-radius:12px; border:1px solid #F0F0F0;">
+                      <div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#ffbad3; font-weight:700; margin-bottom:6px;">CONCEPT &amp; ITERATE</div>
+                      <div style="font-size:13px; line-height:1.45; color:#5e5e5e;">Mapped primary user journeys and designed wireframes in close collaboration with product engineering.</div>
+                    </div>
+                    <div style="background:#f9f9f9; padding:18px; border-radius:12px; border:1px solid #F0F0F0;">
+                      <div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#ffbad3; font-weight:700; margin-bottom:6px;">TEST &amp; REFINE</div>
+                      <div style="font-size:13px; line-height:1.45; color:#5e5e5e;">Conducted 6 usability tests, documented cognitive breakdown points, and implemented high-fidelity visual design.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <!-- 3. RESEARCH & DISCOVERY -->
+              <div style="margin-bottom: 56px;">
+                <div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#ffbad3; font-weight:700; margin-bottom:8px; text-transform:uppercase; letter-spacing:0.08em;">RESEARCH</div>
+                <h3 style="font-size: 22px; font-weight: 700; color: #1a1a1a; margin-top: 0; margin-bottom: 12px; line-height: 1.3;">03. Mixed-Method Research &amp; Synthesis</h3>
+                <p style="font-size:15px; font-weight:600; color:#333; line-height:1.5; margin:0 0 24px;">
+                  Validating roommate painpoints through survey analysis, Reddit sentiment scraping, and competitive matrix audits.
+                </p>
+                <div style="font-size:16.5px; line-height:1.75; color:#4a4a4a;">
+                  <p style="margin:0 0 24px;">
+                    We set out to validate the severity of roommate coordination painpoints and map how groups manage shared supplies:
+                  </p>
+                  
+                  <!-- Stats Grid -->
+                  <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:16px; margin-bottom:28px;">
+                    <div style="background:#fcfcfc; border:1px solid #ECECEC; padding:18px; border-radius:16px; text-align:center;">
+                      <div style="font-size:32px; font-weight:800; color:#1a1a1a; margin-bottom:4px;">82%</div>
+                      <div style="font-size:11px; font-weight:700; color:#ffbad3; font-family:'JetBrains Mono',monospace; text-transform:uppercase; margin-bottom:6px; letter-spacing:0.04em;">Survey (n=31)</div>
+                      <div style="font-size:12.5px; line-height:1.45; color:#5e5e5e; text-align:left; margin:0;">Reported active, regular friction over splitting grocery and household supply costs.</div>
+                    </div>
+                    <div style="background:#fcfcfc; border:1px solid #ECECEC; padding:18px; border-radius:16px; text-align:center;">
+                      <div style="font-size:32px; font-weight:800; color:#1a1a1a; margin-bottom:4px;">74%</div>
+                      <div style="font-size:11px; font-weight:700; color:#ffbad3; font-family:'JetBrains Mono',monospace; text-transform:uppercase; margin-bottom:6px; letter-spacing:0.04em;">Tool Bloat</div>
+                      <div style="font-size:12.5px; line-height:1.45; color:#5e5e5e; text-align:left; margin:0;">Used 3+ distinct applications (Notes, Group Text, Splitwise) to complete one supply purchase cycle.</div>
+                    </div>
+                    <div style="background:#fcfcfc; border:1px solid #ECECEC; padding:18px; border-radius:16px; text-align:center;">
+                      <div style="font-size:32px; font-weight:800; color:#1a1a1a; margin-bottom:4px;">r/roommates</div>
+                      <div style="font-size:11px; font-weight:700; color:#ffbad3; font-family:'JetBrains Mono',monospace; text-transform:uppercase; margin-bottom:6px; letter-spacing:0.04em;">Emotional Labor</div>
+                      <div style="font-size:12.5px; line-height:1.45; color:#5e5e5e; text-align:left; margin:0;">Reddit organic analysis showed that the core frustration is the chore of checking in and chasing money.</div>
+                    </div>
+                  </div>
+                  
+                  <!-- Competitive Landscape Callout -->
+                  <div style="background:#fbfbfb; border:1px solid #ECECEC; border-radius:16px; padding:18px; margin-bottom:32px; display:flex; align-items:center; gap:16px;">
+                    <div style="font-size:24px; flex-shrink:0;">⚖️</div>
+                    <div style="font-size:13.5px; line-height:1.55; color:#5e5e5e; margin:0;">
+                      <strong>Competitive Landscape:</strong> Existing tools only solve fragments of the loop: <strong>Splitwise</strong> lacks collaborative lists; <strong>Apple Notes</strong> lacks auto-calculating split logic; and <strong>Venmo</strong> lacks group context.
+                    </div>
+                  </div>
+                  
+                  <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px;">
+                    <div style="background:#fbfbfb; border:1px solid #ECECEC; border-radius:16px; overflow:hidden; padding:8px; display:flex; align-items:center; justify-content:center; box-shadow:0 2px 8px rgba(0,0,0,0.02);">
+                      <img src="assets/smartcart-affinity.png" style="width:100%; height:auto; display:block; border-radius:8px;" alt="Affinity mapping board and survey findings" />
+                    </div>
+                    <div style="background:#fbfbfb; border:1px solid #ECECEC; border-radius:16px; overflow:hidden; padding:8px; display:flex; align-items:center; justify-content:center; box-shadow:0 2px 8px rgba(0,0,0,0.02);">
+                      <img src="assets/smartcart-reddit.png" style="width:100%; height:auto; display:block; border-radius:8px;" alt="Reddit research comments collage" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <!-- 4. KEY INSIGHTS -->
+              <div style="margin-bottom: 56px;">
+                <div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#ffbad3; font-weight:700; margin-bottom:8px; text-transform:uppercase; letter-spacing:0.08em;">OPPORTUNITIES</div>
+                <h3 style="font-size: 22px; font-weight: 700; color: #1a1a1a; margin-top: 0; margin-bottom: 12px; line-height: 1.3;">04. Key Insights &amp; Opportunities</h3>
+                <p style="font-size:15px; font-weight:600; color:#333; line-height:1.5; margin:0 0 24px;">
+                  Offloading tracking to the system to eliminate user friction, social awkwardness, and perceived inequity.
+                </p>
+                <div style="font-size:16.5px; line-height:1.75; color:#4a4a4a;">
+                  <!-- Opportunity Space 1 -->
+                  <div style="background:#fcfcfc; border:1px solid #ECECEC; border-radius:16px; padding:24px; margin-bottom:20px; box-shadow:0 4px 12px rgba(0,0,0,0.01);">
+                    <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:8px;">
+                      <div style="font-weight:700; color:#1a1a1a; font-size:15px; text-transform:uppercase; font-family:'JetBrains Mono',monospace;">Insight 01 — Tool Fragmentation</div>
+                      <div style="font-size:11px; color:#ffbad3; font-weight:700; font-family:'JetBrains Mono',monospace;">OPPORTUNITY</div>
+                    </div>
+                    <p style="font-size:14.5px; line-height:1.6; color:#5e5e5e; margin:0;">
+                      Roommates forget transactions because they occur in one app (Venmo/Splitwise) while the physical list is in another (Apple Notes). By integrating list management directly with bill splitting, transactions are logged automatically at the moment of check-off.
+                    </p>
+                  </div>
+
+                  <!-- Opportunity Space 2 -->
+                  <div style="background:#fcfcfc; border:1px solid #ECECEC; border-radius:16px; padding:24px; margin-bottom:20px; box-shadow:0 4px 12px rgba(0,0,0,0.01);">
+                    <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:8px;">
+                      <div style="font-weight:700; color:#1a1a1a; font-size:15px; text-transform:uppercase; font-family:'JetBrains Mono',monospace;">Insight 02 — Interpersonal Friction</div>
+                      <div style="font-size:11px; color:#ffbad3; font-weight:700; font-family:'JetBrains Mono',monospace;">OPPORTUNITY</div>
+                    </div>
+                    <p style="font-size:14.5px; line-height:1.6; color:#5e5e5e; margin:0;">
+                      Following up for money creates awkward social friction. We need to offload the tracking to the system itself, letting automated, neutral nudges handle requests rather than placing the burden of confrontation on cohabitants.
+                    </p>
+                  </div>
+
+                  <!-- Opportunity Space 3 -->
+                  <div style="background:#fcfcfc; border:1px solid #ECECEC; border-radius:16px; padding:24px; margin-bottom:0; box-shadow:0 4px 12px rgba(0,0,0,0.01);">
+                    <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:8px;">
+                      <div style="font-weight:700; color:#1a1a1a; font-size:15px; text-transform:uppercase; font-family:'JetBrains Mono',monospace;">Insight 03 — Perceived Inequity</div>
+                      <div style="font-size:11px; color:#ffbad3; font-weight:700; font-family:'JetBrains Mono',monospace;">OPPORTUNITY</div>
+                    </div>
+                    <p style="font-size:14.5px; line-height:1.6; color:#5e5e5e; margin:0;">
+                      When contributions aren't visible, roommates build silent resentment. Providing transparent, historical overviews of who purchased what and visual spending distributions fosters cohabitant accountability and trust.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+
+              <!-- 5. USER FLOWS -->
+              <div style="margin-bottom: 56px;">
+                <div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#ffbad3; font-weight:700; margin-bottom:8px; text-transform:uppercase; letter-spacing:0.08em;">ARCHITECTURE</div>
+                <h3 style="font-size: 22px; font-weight: 700; color: #1a1a1a; margin-top: 0; margin-bottom: 12px; line-height: 1.3;">05. User Flows &amp; System Architecture</h3>
+                <p style="font-size:15px; font-weight:600; color:#333; line-height:1.5; margin:0 0 24px;">
+                  Ensuring robust navigation pathways across the full group list checkout, shopper assignment, and roommate balance updates.
+                </p>
+                <div style="font-size:16.5px; line-height:1.75; color:#4a4a4a;">
+                  <p style="margin:0 0 24px;">
+                    I mapped out the entire lifecycle from group creation, collaborative item additions, shopper assignments, shopping list checkout, to the automatic updating of roommate balances. This structural clarity ensured we didn't leave dead-ends in our navigation pathways.
+                  </p>
+                  <div style="background:#fbfbfb; border:1px solid #ECECEC; border-radius:20px; overflow:hidden; padding:12px; margin-bottom:0; text-align:center; box-shadow:0 4px 16px rgba(0,0,0,0.03);">
+                    <img src="assets/smartcart-userflow.png" style="width:100%; height:auto; display:inline-block; border-radius:12px;" alt="SmartCart User Flows & System Architecture Map" />
+                  </div>
+                </div>
+              </div>
+
+
+              <!-- 6. WIREFRAMING & COLLABORATION -->
+              <div style="margin-bottom: 56px;">
+                <div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#ffbad3; font-weight:700; margin-bottom:8px; text-transform:uppercase; letter-spacing:0.08em;">COLLABORATION</div>
+                <h3 style="font-size: 22px; font-weight: 700; color: #1a1a1a; margin-top: 0; margin-bottom: 12px; line-height: 1.3;">06. Wireframing &amp; Engineering</h3>
+                <p style="font-size:15px; font-weight:600; color:#333; line-height:1.5; margin:0 0 24px;">
+                  Partnering with engineering and PM to resolve technical constraints, design hierarchy, and terminology alignment.
+                </p>
+                <div style="font-size:16.5px; line-height:1.75; color:#4a4a4a;">
+                  <p style="margin:0 0 20px;">
+                    I collaborated closely with PM &amp; Engineering to test layout hierarchies, optimize technical feasibility, and align terminology with user expectations:
+                  </p>
+                  
+                  <!-- Design Decisions Table -->
+                  <div style="background:#fcfcfc; border:1px solid #ECECEC; border-radius:16px; overflow:hidden; margin-bottom:32px; box-shadow:0 4px 12px rgba(0,0,0,0.01);">
+                    <table style="width:100%; border-collapse:collapse; font-size:13.5px; text-align:left; line-height:1.5; color:#5e5e5e;">
+                      <thead>
+                        <tr style="background:#f6f6f8; border-bottom:1px solid #ECECEC;">
+                          <th style="padding:14px 18px; font-weight:700; color:#1a1a1a; width:25%;">Screen / Focus</th>
+                          <th style="padding:14px 18px; font-weight:700; color:#1a1a1a; width:35%;">Initial Wireframe (Before)</th>
+                          <th style="padding:14px 18px; font-weight:700; color:#1a1a1a; width:40%;">Design Decision (After)</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr style="border-bottom:1px solid #ECECEC;">
+                          <td style="padding:14px 18px; font-weight:700; color:#1a1a1a; vertical-align:top;">Home Page Action</td>
+                          <td style="padding:14px 18px; vertical-align:top;">Bulky, screen-cluttering "Add Item" button overlay.</td>
+                          <td style="padding:14px 18px; vertical-align:top;">Converted to a sleek, top-header plus icon to maximize list readability.</td>
+                        </tr>
+                        <tr style="border-bottom:1px solid #ECECEC;">
+                          <td style="padding:14px 18px; font-weight:700; color:#1a1a1a; vertical-align:top;">Terminology Alignment</td>
+                          <td style="padding:14px 18px; vertical-align:top;">Used "Balance," which users confused with a digital wallet balance.</td>
+                          <td style="padding:14px 18px; vertical-align:top;">Refined balance card copy to clarify it represents outstanding roommate debt rather than stored cash.</td>
+                        </tr>
+                        <tr>
+                          <td style="padding:14px 18px; font-weight:700; color:#1a1a1a; vertical-align:top;">Transaction History</td>
+                          <td style="padding:14px 18px; vertical-align:top;">Repeated the household name on every transaction item.</td>
+                          <td style="padding:14px 18px; vertical-align:top;">Removed redundant group labels to highlight the shopper name, items, and cost.</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  
+                  <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px;">
+                    <div style="background:#fbfbfb; border:1px solid #ECECEC; border-radius:16px; overflow:hidden; padding:8px; display:flex; align-items:center; justify-content:center; box-shadow:0 2px 8px rgba(0,0,0,0.02);">
+                      <img src="assets/smartcart-wireframes-v1.png" style="width:100%; height:auto; display:block; border-radius:8px;" alt="First Round Wireframes: Screen layout and terminology exploration" />
+                    </div>
+                    <div style="background:#fbfbfb; border:1px solid #ECECEC; border-radius:16px; overflow:hidden; padding:8px; display:flex; align-items:center; justify-content:center; box-shadow:0 2px 8px rgba(0,0,0,0.02);">
+                      <img src="assets/smartcart-wireframes-v2.png" style="width:100%; height:auto; display:block; border-radius:8px;" alt="Second Round Wireframes: System user flow map and layout refinements" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <!-- 7. VISUAL SYSTEM -->
+              <div style="margin-bottom: 56px;">
+                <div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#ffbad3; font-weight:700; margin-bottom:8px; text-transform:uppercase; letter-spacing:0.08em;">VISUAL SYSTEM</div>
+                <h3 style="font-size: 22px; font-weight: 700; color: #1a1a1a; margin-top: 0; margin-bottom: 12px; line-height: 1.3;">07. Visual System &amp; Design System</h3>
+                <p style="font-size:15px; font-weight:600; color:#333; line-height:1.5; margin:0 0 24px;">
+                  Optimizing readability and reducing stress through a calming ocean gradient palette and highly legible geometric typography.
+                </p>
+                <div style="font-size:16.5px; line-height:1.75; color:#4a4a4a;">
+                  <p style="margin:0 0 24px;">
+                    Because SmartCart is a utility meant for frequent daily use, it needed to feel lightweight, modern, and readable at a glance in a chaotic grocery store aisle. We analyzed successful consumer tools like Uber (progressive choice disclosure) and Spotify (clean structural scanability).
+                  </p>
+                  
+                  <!-- Design Tokens Grid -->
+                  <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:20px; margin-bottom:24px; background:#fbfbfb; border:1px solid #ECECEC; border-radius:16px; padding:24px; box-shadow:0 4px 12px rgba(0,0,0,0.01);">
+                    <div>
+                      <div style="font-weight:700; color:#1a1a1a; font-size:13px; margin-bottom:8px; font-family:'JetBrains Mono',monospace; text-transform:uppercase; letter-spacing:0.04em;">Typography</div>
+                      <div style="font-size:13.5px; line-height:1.55; color:#5e5e5e;">
+                        <strong>Satoshi Typeface</strong><br/>
+                        Clean, high-legibility geometric sans-serif that supports fast visual scanning and reading on mobile devices.
+                      </div>
+                    </div>
+                    <div>
+                      <div style="font-weight:700; color:#1a1a1a; font-size:13px; margin-bottom:8px; font-family:'JetBrains Mono',monospace; text-transform:uppercase; letter-spacing:0.04em;">Color System</div>
+                      <div style="font-size:13.5px; line-height:1.55; color:#5e5e5e;">
+                        <strong>Ocean Gradient Blue &amp; Graphite</strong><br/>
+                        A calming palette that distances the experience from heavy banking software and emphasizes collaborative utility.
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div style="background:#ffffff; border:1px solid #ECECEC; border-radius:20px; overflow:hidden; padding:12px; margin-bottom:0; text-align:center; box-shadow:0 4px 16px rgba(0,0,0,0.03);">
+                    <img src="assets/smartcart-designsystem.png" style="width:100%; height:auto; display:inline-block; border-radius:12px;" alt="SmartCart Design System: Typography scale, color palette, and custom iconography" />
+                  </div>
+                </div>
+              </div>
+
+
+              <!-- 8. USABILITY TESTING -->
+              <div style="margin-bottom: 56px;">
+                <div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#ffbad3; font-weight:700; margin-bottom:8px; text-transform:uppercase; letter-spacing:0.08em;">USABILITY</div>
+                <h3 style="font-size: 22px; font-weight: 700; color: #1a1a1a; margin-top: 0; margin-bottom: 12px; line-height: 1.3;">08. Usability Testing &amp; Design Pivots</h3>
+                <p style="font-size:15px; font-weight:600; color:#333; line-height:1.5; margin:0 0 24px;">
+                  Translating observational user insights from target testing groups into direct product layout adjustments.
+                </p>
+                <div style="font-size:16.5px; line-height:1.75; color:#4a4a4a;">
+                  <p style="margin:0 0 24px;">
+                    We tested the interactive prototype with 6 target users in realistic grocery scenarios. The testing revealed key friction points:
+                  </p>
+      
+                  <!-- Usability Finding 1 -->
+                  <div style="border-left:3px solid #EDEBF6; padding-left:20px; margin-bottom:20px;">
+                    <div style="font-weight:700; color:#1a1a1a; font-size:15.5px; margin-bottom:4px;">Finding 01: Contextless Spending Insights</div>
+                    <p style="font-size:13.5px; line-height:1.55; color:#5e5e5e; margin:0 0 6px;">
+                      Users found visual spending graphs confusing without action context; they knew the percentages, but didn't know if they were spending too much.
+                    </p>
+                    <p style="font-size:13px; color:#ffbad3; margin:0; font-weight:600;">
+                      👉 Response: Added dynamic text insights (e.g., <em>"Spent 12% less on supplies than last month"</em>) to explain the graphs.
+                    </p>
+                  </div>
+      
+                  <!-- Usability Finding 2 -->
+                  <div style="border-left:3px solid #EDEBF6; padding-left:20px; margin-bottom:20px;">
+                    <div style="font-weight:700; color:#1a1a1a; font-size:15.5px; margin-bottom:4px;">Finding 02: Hidden Group Customization</div>
+                    <p style="font-size:13.5px; line-height:1.55; color:#5e5e5e; margin:0 0 6px;">
+                      Roommates struggled to find where to add members or customize settings, expecting immediate access from the Home view.
+                    </p>
+                    <p style="font-size:13px; color:#ffbad3; margin:0; font-weight:600;">
+                      👉 Response: Positioned a prominent settings gear directly in the top header of the Home screen.
+                    </p>
+                  </div>
+      
+                  <!-- Usability Finding 3 -->
+                  <div style="border-left:3px solid #EDEBF6; padding-left:20px; margin-bottom:0;">
+                    <div style="font-weight:700; color:#1a1a1a; font-size:15.5px; margin-bottom:4px;">Finding 03: Page Layout Ambiguity</div>
+                    <p style="font-size:13.5px; line-height:1.55; color:#5e5e5e; margin:0 0 6px;">
+                      Identical layouts for group lists and personal checklists caused task confusion in testing.
+                    </p>
+                    <p style="font-size:13px; color:#ffbad3; margin:0; font-weight:600;">
+                      👉 Response: Introduced distinctive headers (lavender-accented for group lists) and unique card templates.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+
+              <!-- 9. FINAL SOLUTION -->
+              <div style="margin-bottom: 56px;">
+                <div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#ffbad3; font-weight:700; margin-bottom:8px; text-transform:uppercase; letter-spacing:0.08em;">FINAL SOLUTION</div>
+                <h3 style="font-size: 22px; font-weight: 700; color: #1a1a1a; margin-top: 0; margin-bottom: 12px; line-height: 1.3;">09. SmartCart in Action: Core Features</h3>
+                <p style="font-size:15px; font-weight:600; color:#333; line-height:1.5; margin:0 0 24px;">
+                  Unifying the lifecycle into cohesive screen interfaces with interactive flow walkthroughs.
+                </p>
+                <div style="font-size:16.5px; line-height:1.75; color:#4a4a4a;">
+                  <p style="margin:0 0 24px;">
+                    Here is how the final product unifies the roommate coordination journey to reduce cognitive and social friction:
+                  </p>
+                  
+                  <div class="sc-features-grid" style="margin-bottom:32px;">
+                    <!-- Row 1: 3 features -->
+                    <div class="sc-features-row-1" style="margin-bottom:16px;">
+                      <div style="background:#ffffff; border:1px solid #ECECEC; border-radius:16px; overflow:hidden; padding:6px; box-shadow:0 4px 12px rgba(0,0,0,0.02);">
+                        <img src="assets/smartcart-feature-01.png" style="width:100%; height:auto; display:block; border-radius:10px;" alt="Feature 01: Shared shopping lists" />
+                      </div>
+                      <div style="background:#ffffff; border:1px solid #ECECEC; border-radius:16px; overflow:hidden; padding:6px; box-shadow:0 4px 12px rgba(0,0,0,0.02);">
+                        <img src="assets/smartcart-feature-02.png" style="width:100%; height:auto; display:block; border-radius:10px;" alt="Feature 02: Purchase history" />
+                      </div>
+                      <div style="background:#ffffff; border:1px solid #ECECEC; border-radius:16px; overflow:hidden; padding:6px; box-shadow:0 4px 12px rgba(0,0,0,0.02);">
+                        <img src="assets/smartcart-feature-03.png" style="width:100%; height:auto; display:block; border-radius:10px;" alt="Feature 03: Spending insights" />
+                      </div>
+                    </div>
+                    <!-- Row 2: 2 features centered -->
+                    <div class="sc-features-row-2">
+                      <div style="background:#ffffff; border:1px solid #ECECEC; border-radius:16px; overflow:hidden; padding:6px; box-shadow:0 4px 12px rgba(0,0,0,0.02);">
+                        <img src="assets/smartcart-feature-04.png" style="width:100%; height:auto; display:block; border-radius:10px;" alt="Feature 04: Manage group" />
+                      </div>
+                      <div style="background:#ffffff; border:1px solid #ECECEC; border-radius:16px; overflow:hidden; padding:6px; box-shadow:0 4px 12px rgba(0,0,0,0.02);">
+                        <img src="assets/smartcart-feature-05.png" style="width:100%; height:auto; display:block; border-radius:10px;" alt="Feature 05: Balance tracking" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Interactive Walkthrough Videos -->
+                  <h4 style="font-size:17px; font-weight:700; color:#1a1a1a; margin:32px 0 12px;">Interactive Walkthroughs</h4>
+                  <p style="margin:0 0 20px; font-size:14px; line-height:1.6; color:#5e5e5e;">
+                    Interact with the player below to watch walkthrough screen recordings of the final high-fidelity interactions in action:
+                  </p>
+                  
+                  <div class="sc-showcase-container">
+                    <!-- Video Container (No phone mockup grid frame, just rounded corners) -->
+                    <div class="sc-video-container">
+                      <video id="sc-demo-video" src="assets/sc-video-add-item.mp4" controls autoplay loop muted playsinline></video>
+                    </div>
+                    
+                    <!-- Tab Controls -->
+                    <div class="sc-showcase-content">
+                      <div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#aeaeae; text-transform:uppercase; letter-spacing:0.08em; font-weight:700;">Select an interaction to play:</div>
+                      <div class="sc-showcase-tabs">
+                        <!-- Tab 1 -->
+                        <button class="sc-showcase-tab-btn active" data-video-path="assets/sc-video-add-item.mp4">
+                          <div class="sc-showcase-tab-title">01. Adding an Item</div>
+                          <div class="sc-showcase-tab-desc">Collaboratively add grocery items to the shared list in real-time.</div>
+                        </button>
+                        <!-- Tab 2 -->
+                        <button class="sc-showcase-tab-btn" data-video-path="assets/sc-video-bought.mp4">
+                          <div class="sc-showcase-tab-title">02. Checking Off &amp; Splitting Expenses</div>
+                          <div class="sc-showcase-tab-desc">Mark items completed to auto-log purchases, calculate balances, and split costs.</div>
+                        </button>
+                        <!-- Tab 3 -->
+                        <button class="sc-showcase-tab-btn" data-video-path="assets/sc-video-history.mp4">
+                          <div class="sc-showcase-tab-title">03. Transaction History &amp; Balances</div>
+                          <div class="sc-showcase-tab-desc">Review the transparent household transaction history and balance indicators showing who owes what.</div>
+                        </button>
+                        <!-- Tab 4 -->
+                        <button class="sc-showcase-tab-btn" data-video-path="assets/sc-video-settings.mp4">
+                          <div class="sc-showcase-tab-title">04. Household Group Settings</div>
+                          <div class="sc-showcase-tab-desc">Configure cohabitants, adjust invite links, and customize household visual themes.</div>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 10. REFLECTIONS & ROADMAP -->
+              <div style="margin-bottom: 56px;">
+                <div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#ffbad3; font-weight:700; margin-bottom:8px; text-transform:uppercase; letter-spacing:0.08em;">REFLECTIONS</div>
+                <h3 style="font-size: 22px; font-weight: 700; color: #1a1a1a; margin-top: 0; margin-bottom: 12px; line-height: 1.3;">10. Reflections &amp; Takeaways</h3>
+                <p style="font-size:15px; font-weight:600; color:#333; line-height:1.5; margin:0 0 24px;">
+                  Key learnings from translating complex, social workflows into simple, habit-building utility interfaces.
+                </p>
+                <div style="font-size:16.5px; line-height:1.75; color:#4a4a4a;">
+                  <div style="display:grid; grid-template-columns: 1fr; gap: 16px; margin-bottom:32px;">
+                    <div style="border-left:3px solid #ffbad3; padding-left:16px;">
+                      <strong style="color:#1a1a1a; font-size:15px;">Clarity Trumps Aesthetics</strong>
+                      <p style="margin:4px 0 0; font-size:13.5px; line-height:1.55; color:#5e5e5e;">
+                        In utility tools, copy clarity is far more critical than visual aesthetics. Clear, descriptive labels eliminate user hesitation and cognitive blockages during active workflows.
+                      </p>
+                    </div>
+                    <div style="border-left:3px solid #ffbad3; padding-left:16px;">
+                      <strong style="color:#1a1a1a; font-size:15px;">Context is Key for Data</strong>
+                      <p style="margin:4px 0 0; font-size:13.5px; line-height:1.55; color:#5e5e5e;">
+                        Showing raw charts and numbers isn't enough. Translating graph data into a plain-English narrative fits the user's active mental model much better than plain numbers.
+                      </p>
+                    </div>
+                    <div style="border-left:3px solid #ffbad3; padding-left:16px;">
+                      <strong style="color:#1a1a1a; font-size:15px;">Minimize Path Length</strong>
+                      <p style="margin:4px 0 0; font-size:13.5px; line-height:1.55; color:#5e5e5e;">
+                        Co-living lists are managed on the go. Minimizing path lengths for primary tasks (logging items, claiming shopper duties) drives daily adoption far more than adding niche features.
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Next Steps -->
+                  <h4 style="font-size:17px; font-weight:700; color:#1a1a1a; margin:32px 0 12px;">Next Steps &amp; Roadmap</h4>
+                  <ul style="padding-left:18px; margin:0; font-size:13.5px; line-height:1.6; color:#5e5e5e;">
+                    <li style="margin-bottom:8px;"><strong>Field Testing:</strong> Deploy the prototype for active, multi-week usage in shared roommate households.</li>
+                    <li style="margin-bottom:8px;"><strong>API Integration:</strong> Connect directly with Venmo &amp; Splitwise APIs to settle balances instantly within the app.</li>
+                    <li style="margin-bottom:8px;"><strong>Location Nudges:</strong> Set up geofenced alerts to notify roommates of needed supplies when they pass a grocery store.</li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+        </sc-if>

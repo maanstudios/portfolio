@@ -1,0 +1,23 @@
+{
+  "name": "portfolio-v1",
+  "version": "1.0.0",
+  "description": "Portfolio Website",
+  "main": "Portfolio.dc.html",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1",
+    "bcrypt": "^6.0.0",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.6.2",
+    "jsonwebtoken": "^9.0.3",
+    "puppeteer": "^25.5.0"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
