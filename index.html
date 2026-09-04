@@ -3843,8 +3843,8 @@ document.addEventListener('mousemove', function(e) {
         e.clientY >= rect.top && e.clientY <= rect.bottom) {
         if (tooltip) {
             tooltip.style.opacity = '1';
-            tooltip.style.left = (e.clientX - rect.left + 24) + 'px';
-            tooltip.style.top = (e.clientY - rect.top + 24) + 'px';
+            tooltip.style.left = (e.clientX - rect.left + 12) + 'px';
+            tooltip.style.top = (e.clientY - rect.top + 12) + 'px';
         }
         if (dandiCursor) {
             dandiCursor.style.opacity = '1';
