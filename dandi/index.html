@@ -576,7 +576,7 @@
 </head>
 <body>
 
-  <nav style="position:sticky;top:0;z-index:999;background:rgba(255,255,255,0.82);backdrop-filter:blur(10px); transition: all 0.3s ease; border-bottom: 1px solid rgba(0,0,0,0.05);">
+  <nav id="dandi-nav" style="position:fixed; top:0; left:0; width:100%; z-index:999; background:transparent; transition: all 0.3s ease; border-bottom: 1px solid transparent;">
     <div style="max-width:1600px;margin:0 auto;padding:0px 7%;display:flex;align-items:center;justify-content:space-between; position:relative;">
       <a href="/" style="display:flex;align-items:center;text-decoration:none;">
         <img src="/assets/maansi-crystal.png" alt="Maansi logo" style="height:60px; width:auto; display:block; transform: translateY(2px);" />
@@ -589,6 +589,23 @@
     </div>
   </nav>
 
+  <script>
+    window.addEventListener('scroll', () => {
+      const nav = document.getElementById('dandi-nav');
+      if (window.scrollY > 20) {
+        nav.style.background = 'rgba(255,255,255,0.82)';
+        nav.style.backdropFilter = 'blur(10px)';
+        nav.style.webkitBackdropFilter = 'blur(10px)';
+        nav.style.borderBottom = '1px solid rgba(0,0,0,0.05)';
+      } else {
+        nav.style.background = 'transparent';
+        nav.style.backdropFilter = 'none';
+        nav.style.webkitBackdropFilter = 'none';
+        nav.style.borderBottom = '1px solid transparent';
+      }
+    });
+  </script>
+
 
 
 
@@ -598,7 +615,7 @@
         <div class="hero-section-wrapper" style="position: relative; background-color: #ffffff;">
             <img src="/dandi/intro-bkgd.png" alt="Intro Background" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; z-index: 0; opacity: 1;">
             
-            <div class="hero-inner" style="position: relative; z-index: 2;">
+            <div class="hero-inner" style="position: relative; z-index: 2; padding-top: 80px;">
                 <a href="/" class="nav-back" style="position: relative; z-index: 2;">← Back to Portfolio</a>
                 
                 <div class="dandi-layout">
