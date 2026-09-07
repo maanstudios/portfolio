@@ -1408,7 +1408,7 @@ window.addEventListener('load', () => {
               </div>
 
               <!-- Tooltip -->
-              <div id="dandi-tooltip" class="dandi-tooltip" style="position: absolute; width: 290px; background: rgba(255, 255, 255, 0.98); border-radius: 14px; box-shadow: 0 10px 40px rgba(0,0,0,0.15); z-index: 100; pointer-events: none; opacity: 0; transition: opacity 0.2s ease; top: 0; left: 0; text-align: left; padding: 16px; box-sizing: border-box; backdrop-filter: blur(8px);">
+              <div id="dandi-tooltip" class="dandi-tooltip" style="position: fixed; width: 290px; background: rgba(255, 255, 255, 0.98); border-radius: 14px; box-shadow: 0 10px 40px rgba(0,0,0,0.15); z-index: 9999; pointer-events: none; opacity: 0; transition: opacity 0.2s ease; top: 0; left: 0; text-align: left; padding: 16px; box-sizing: border-box; backdrop-filter: blur(8px);">
                 <div style="margin-bottom: 12px;">
                   <div style="font-size: 11px; font-weight: 600; color: #8c8c8c; margin-bottom: 3px;">role</div>
                   <div style="font-size: 14px; color: #1a1a1a; font-family:'Switzer', sans-serif;">designer + builder</div>
@@ -3898,8 +3898,8 @@ document.addEventListener('mousemove', function(e) {
         e.clientY >= rect.top && e.clientY <= rect.bottom) {
         if (tooltip) {
             tooltip.style.opacity = '1';
-            tooltip.style.left = (e.clientX - rect.left + 8) + 'px';
-            tooltip.style.top = (e.clientY - rect.top + 8) + 'px';
+            tooltip.style.left = (e.clientX + 16) + 'px';
+            tooltip.style.top = (e.clientY + 16) + 'px';
         }
         if (dandiCursor) {
             dandiCursor.style.opacity = '1';
