@@ -26,6 +26,61 @@
 <meta name="twitter:image" content="https://maansisurve.com/assets/og-image.png">
 </head>
 <body>
+<style>
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999999;
+  transition: opacity 0.5s ease;
+}
+.loading-text {
+  font-family: 'Switzer', sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.2);
+  letter-spacing: 2px;
+}
+.loading-text span {
+  animation: fillOpacity 1.2s infinite alternate;
+}
+.loading-text span:nth-child(1) { animation-delay: 0.0s; }
+.loading-text span:nth-child(2) { animation-delay: 0.1s; }
+.loading-text span:nth-child(3) { animation-delay: 0.2s; }
+.loading-text span:nth-child(4) { animation-delay: 0.4s; }
+.loading-text span:nth-child(5) { animation-delay: 0.5s; }
+.loading-text span:nth-child(6) { animation-delay: 0.6s; }
+.loading-text span:nth-child(7) { animation-delay: 0.7s; }
+.loading-text span:nth-child(8) { animation-delay: 0.8s; }
+.loading-text span:nth-child(9) { animation-delay: 0.9s; }
+.loading-text span:nth-child(10) { animation-delay: 1.0s; }
+@keyframes fillOpacity {
+  0% { color: rgba(0, 0, 0, 0.2); }
+  100% { color: rgba(0, 0, 0, 1); }
+}
+</style>
+<div id="loading-screen">
+  <div class="loading-text">
+    <span>l</span><span>o</span><span>a</span><span>d</span><span>i</span><span>n</span><span>g</span><span>.</span><span>.</span><span>.</span>
+  </div>
+</div>
+<script>
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        const loader = document.getElementById('loading-screen');
+        if (loader) {
+            loader.style.opacity = '0';
+            setTimeout(() => loader.style.display = 'none', 500);
+        }
+    }, 1500); // 1.5 second delay so the animation gets a chance to play
+});
+</script>
   
 
 <x-dc>
