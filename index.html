@@ -1337,8 +1337,56 @@ window.addEventListener('load', () => {
         <!-- Footer Text Section (Moved to Top) -->
         <div class="home-footer" style="margin-bottom: 64px;">
           <!-- Bottom Left Text -->
+          <style>
+            .name-squares-container {
+              display: flex;
+              gap: 2px;
+              margin-bottom: 24px;
+              align-items: center;
+              animation: slideUpFade 1.8s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards;
+              opacity: 0;
+            }
+            .name-square {
+              width: 48px;
+              height: 48px;
+              display: block;
+              transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+              cursor: pointer;
+              --rot: 0deg;
+              transform: rotate(var(--rot));
+              position: relative;
+            }
+            .name-square img {
+              width: 100%;
+              height: 100%;
+              object-fit: contain;
+              border-radius: 8px; /* fallback for placehold.co */
+            }
+            .name-square:hover {
+              transform: translateY(-8px) scale(1.1) rotate(0deg);
+              z-index: 10;
+            }
+            @media (max-width: 768px) {
+              .name-square {
+                width: 36px;
+                height: 36px;
+              }
+            }
+          </style>
           <div style="font-family:'Switzer', sans-serif; color:#1a1a1a; z-index:20;">
-            <div style="font-size:16px; font-weight:400; color:#1a1a1a; margin-bottom: 16px; animation: slideUpFade 1.8s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards; opacity: 0;">maansi surve</div>
+            <div class="name-squares-container">
+              <div class="name-square" style="--rot:-3deg;"><img src="assets/square_m.png" alt="M" onerror="this.src='https://placehold.co/100x100/1a1a1a/7de8b6?text=M'"></div>
+              <div class="name-square" style="--rot:2deg;"><img src="assets/square_a1.png" alt="A" onerror="this.src='https://placehold.co/100x100/1a1a1a/7de8b6?text=A'"></div>
+              <div class="name-square" style="--rot:-1deg;"><img src="assets/square_a2.png" alt="A" onerror="this.src='https://placehold.co/100x100/1a1a1a/7de8b6?text=A'"></div>
+              <div class="name-square" style="--rot:3deg;"><img src="assets/square_n.png" alt="N" onerror="this.src='https://placehold.co/100x100/1a1a1a/7de8b6?text=N'"></div>
+              <div class="name-square" style="--rot:-2deg;"><img src="assets/square_s.png" alt="S" onerror="this.src='https://placehold.co/100x100/1a1a1a/7de8b6?text=S'"></div>
+              <div class="name-square" style="--rot:1deg;"><img src="assets/square_i.png" alt="I" onerror="this.src='https://placehold.co/100x100/1a1a1a/7de8b6?text=I'"></div>
+              
+              <div class="name-square" style="--rot:-4deg; margin-left: 6px;"><img src="assets/square_arrow.png" alt="Arrow" onerror="this.src='https://placehold.co/100x100/ffe4fa/1a1a1a?text=->'"></div>
+              <div class="name-square" style="--rot:2deg;"><img src="assets/square_dandi.png" alt="Dandi" onerror="this.src='https://placehold.co/100x100/1a1a1a/ffffff?text=dandi'"></div>
+              <div class="name-square" style="--rot:-1deg;"><img src="assets/square_uw.png" alt="UW" onerror="this.src='https://placehold.co/100x100/3b2c65/ffffff?text=W'"></div>
+              <div class="name-square" style="--rot:3deg;"><img src="assets/square_ms.png" alt="Microsoft" onerror="this.src='https://placehold.co/100x100/ffffff/1a1a1a?text=MS'"></div>
+            </div>
             <h1 class="hero-title" style="font-family:'Switzer', sans-serif; font-size:64px; font-weight:400; margin:0; letter-spacing:-0.04em; line-height:0.9; color:#000000; display:flex; flex-direction:column;">
               <div style="animation: slideUpFade 1.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards; opacity: 0;">product</div>
               <div style="animation: slideUpFade 1.8s cubic-bezier(0.16, 1, 0.3, 1) 0.5s forwards; opacity: 0;">designer</div>
