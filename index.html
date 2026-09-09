@@ -1152,7 +1152,7 @@ window.addEventListener('load', () => {
   </nav>
 
   <!-- ===== PAGE WRAPPER ===== -->
-  <section style="max-width:1600px;margin:0 auto;padding:40px 7% 0;">
+  <section style="max-width:1600px;margin:0 auto;padding:140px 7% 0;">
 
     <style>
       .cards-group:hover .project-card {
@@ -1340,11 +1340,13 @@ window.addEventListener('load', () => {
           <style>
             .name-squares-container {
               display: flex;
-              gap: 2px;
               margin-bottom: 24px;
               align-items: center;
               animation: slideUpFade 1.8s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards;
               opacity: 0;
+            }
+            .name-square + .name-square {
+              margin-left: -4px;
             }
             .name-square {
               width: 52px;
