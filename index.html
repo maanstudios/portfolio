@@ -1102,7 +1102,7 @@ window.addEventListener('load', () => {
 <div style="background:#ffffff;min-height:100vh;font-family:'Switzer','Switzer',sans-serif;color:#1a1a1a; overflow-x: hidden;">
 
   <!-- ===== NAV ===== -->
-  <nav style="position:fixed; bottom: 40px; left: 50%; transform: translateX(-50%); z-index:9999; background:rgba(255,255,255,0.85); backdrop-filter:blur(24px); -webkit-backdrop-filter:blur(24px); border:1px solid rgba(0,0,0,0.06); border-radius: 40px; padding: 14px 28px; display:flex; align-items:center; gap: 32px; box-shadow: 0 12px 48px rgba(0,0,0,0.12);">
+  <nav id="floating-nav" style="position:fixed; bottom: 40px; left: 50%; transform: translateX(-50%); z-index:9999; background:rgba(255,255,255,0.85); backdrop-filter:blur(24px); -webkit-backdrop-filter:blur(24px); border:1px solid rgba(0,0,0,0.06); border-radius: 40px; padding: 14px 28px; display:flex; align-items:center; gap: 32px; box-shadow: 0 12px 48px rgba(0,0,0,0.12);">
     <!-- Home -->
     <a href="/" onclick="{{changePageWork}}" style="color: #666; transition: all 0.2s ease; display: flex;" onmouseover="this.style.color='#000'; this.style.transform='translateY(-2px)';" onmouseout="this.style.color='#666'; this.style.transform='translateY(0)';">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
@@ -3863,7 +3863,9 @@ document.addEventListener('mousemove', function(e) {
     if (!container) return;
     
     var rect = container.getBoundingClientRect();
-    if (e.clientX >= rect.left && e.clientX <= rect.right &&
+    var isOverNav = e.target.closest && e.target.closest('#floating-nav');
+    
+    if (!isOverNav && e.clientX >= rect.left && e.clientX <= rect.right &&
         e.clientY >= rect.top && e.clientY <= rect.bottom) {
         if (tooltip) {
             tooltip.style.opacity = '1';
