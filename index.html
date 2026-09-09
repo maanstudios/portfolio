@@ -1785,6 +1785,18 @@ window.addEventListener('load', () => {
       </button>
 
       <div>
+        <!-- CASE STUDY: DANDI -->
+        <sc-if value="{{activeProject === 'dandi'}}">
+          <div style="width: 100%; height: 100vh; position: relative; background: #ffffff;">
+            <!-- Loading Animation -->
+            <div id="dandi-loader" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: #ffffff; z-index: 1;">
+              <div class="loading-text">
+                <span>l</span><span>o</span><span>a</span><span>d</span><span>i</span><span>n</span><span>g</span><span>.</span><span>.</span><span>.</span>
+              </div>
+            </div>
+            <iframe src="/dandi/" style="width: 100%; height: 100%; border: none; position: relative; z-index: 2;" onload="document.getElementById('dandi-loader').style.display='none';"></iframe>
+          </div>
+        </sc-if>
         
         <!-- CASE STUDY: DROPPIT -->
         <sc-if value="{{activeProject === 'droppit'}}">
@@ -3458,7 +3470,7 @@ class Component extends DCLogic {
       openDroppit: () => this.openProject('droppit'),
       openSmartCart: () => this.openProject('smartcart'),
       openUDistrictVolunteers: () => this.openProject('uda'),
-      openDandi: () => { window.location.href = '/dandi'; },
+      openDandi: () => this.openProject('dandi'),
       closeProject: () => this.closeProject(),
       stopPropagation: (e) => e.stopPropagation()
     };
