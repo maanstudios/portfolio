@@ -1415,11 +1415,6 @@ window.addEventListener('load', () => {
             <span style="color:#8c8c8c;"><sc-if value="{{!isWorkTabFeatured}}">Featured</sc-if></span>
             <sc-if value="{{isWorkTabFeatured}}"><div style="position:absolute; bottom:-1px; left:0; width:100%; height:2px; background:#1a1a1a;"></div></sc-if>
           </div>
-          <div onclick="{{setWorkTabExperience}}" style="cursor:pointer; padding-bottom:12px; position:relative;">
-            <span style="color:#1a1a1a;"><sc-if value="{{isWorkTabExperience}}">Work Experience</sc-if></span>
-            <span style="color:#8c8c8c;"><sc-if value="{{!isWorkTabExperience}}">Work Experience</sc-if></span>
-            <sc-if value="{{isWorkTabExperience}}"><div style="position:absolute; bottom:-1px; left:0; width:100%; height:2px; background:#1a1a1a;"></div></sc-if>
-          </div>
           <div onclick="{{setWorkTabExtras}}" style="cursor:pointer; padding-bottom:12px; position:relative;">
             <span style="color:#1a1a1a;"><sc-if value="{{isWorkTabExtras}}">Extras</sc-if></span>
             <span style="color:#8c8c8c;"><sc-if value="{{!isWorkTabExtras}}">Extras</sc-if></span>
@@ -1429,84 +1424,76 @@ window.addEventListener('load', () => {
         
         <!-- FEATURED TAB -->
         <sc-if value="{{isWorkTabFeatured}}" style="display: block; width: 100%;">
-          <div id="dandi-click-target" style="width: 100%; margin-bottom: 80px; cursor: pointer;" onclick="{{openDandi}}">
-            <div id="dandi-hover-container" style="width: 100%; margin-bottom: 16px; position: relative; cursor: none;">
-              <div style="width: 100%; height: 550px; border-radius: 12px; box-shadow: 0 4px 24px rgba(0,0,0,0.06); background-color: #f7f7f7; overflow: hidden; position: relative; transition: box-shadow 0.4s ease;">
-                <img src="dandi/hero-bkgd.png" style="width: 100%; height: 100%; object-fit: cover; display: block; position: absolute; top: 0; left: 0;" alt="dandi background" />
-                
-                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; gap: 16px; align-items: center; justify-content: center; padding: 0; box-sizing: border-box;">
-                  <div class="video-zoom-container" style="flex: 1 1 0; min-width: 0; height: 100%; overflow: hidden;">
-                    <div style="width: 100%; height: 100%; transform: scale(1.1); transform-origin: center;">
-                      <img src="dandi/appstoreview.png" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
-                    </div>
-                  </div>
-                  <div class="video-zoom-container" style="flex: 1 1 0; min-width: 0; height: 100%; overflow: hidden;">
-                    <video src="dandi/hero-vid.mov" autoplay loop muted playsinline style="width: 100%; height: 100%; object-fit: cover; pointer-events: none; display: block;"></video>
-                  </div>
-                  <div class="video-zoom-container" style="flex: 1 1 0; min-width: 0; height: 100%; overflow: hidden;">
-                    <img src="dandi/hero-1.png" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
-                  </div>
-                  <div class="video-zoom-container" style="flex: 1 1 0; min-width: 0; height: 100%; overflow: hidden;">
-                    <div style="width: 100%; height: 100%; transform: scale(1.12); transform-origin: center;">
-                      <img src="dandi/hero-2.png" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
-                    </div>
-                  </div>
-                </div>
-
-                </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; width: 100%; margin-bottom: 80px;">
+            
+            <!-- 1. DANDI -->
+            <div style="display: flex; flex-direction: column; gap: 12px; cursor: pointer; transition: transform 0.2s ease;" onclick="{{openDandi}}" onmouseover="this.style.transform='scale(0.98)';" onmouseout="this.style.transform='scale(1)';">
+              <div style="width: 100%; aspect-ratio: 16/10; border-radius: 12px; border: 1px solid #eaeaea; overflow: hidden; background: #000; display: flex; align-items: center; justify-content: center;">
+                <!-- Blank thumbnail placeholder -->
               </div>
-
-              <!-- Tooltip -->
-              <div id="dandi-tooltip" class="dandi-tooltip" style="position: fixed; width: 290px; background: rgba(255, 255, 255, 0.98); border-radius: 14px; box-shadow: 0 10px 40px rgba(0,0,0,0.15); z-index: 9999; pointer-events: none; opacity: 0; transition: opacity 0.2s ease; top: 0; left: 0; text-align: left; padding: 16px; box-sizing: border-box; backdrop-filter: blur(8px);">
-                <div style="margin-bottom: 12px;">
-                  <div style="font-size: 11px; font-weight: 600; color: #8c8c8c; margin-bottom: 3px;">role</div>
-                  <div style="font-size: 14px; color: #1a1a1a; font-family:'Switzer', sans-serif;">designer + builder</div>
+              <div style="display: flex; justify-content: space-between; align-items: center; font-family: 'Switzer', sans-serif;">
+                <div style="display: flex; gap: 8px; align-items: center;">
+                  <div style="background: #000; color: #fff; font-size: 13px; font-weight: 500; padding: 4px 10px; border-radius: 4px;">Dandi</div>
+                  <div style="color: #8c8c8c; font-size: 14px;">Goal setting app</div>
                 </div>
-                <div style="height: 1px; background: #eaeaea; margin-bottom: 12px;"></div>
-                <div style="margin-bottom: 12px;">
-                  <div style="font-size: 11px; font-weight: 600; color: #8c8c8c; margin-bottom: 3px;">problem</div>
-                  <div style="font-size: 14px; color: #1a1a1a; font-family:'Switzer', sans-serif; line-height: 1.4;">big goals are easy to set, and even easier to lose track of.</div>
-                </div>
-                <div style="height: 1px; background: #eaeaea; margin-bottom: 12px;"></div>
-                <div>
-                  <div style="font-size: 11px; font-weight: 600; color: #8c8c8c; margin-bottom: 3px;">solution</div>
-                  <div style="font-size: 14px; color: #1a1a1a; font-family:'Switzer', sans-serif; line-height: 1.4;"><strong>dandi:</strong> turning big goals into actionable plans you can stick to.</div>
-                </div>
-              </div>
-            <div style="display: flex; justify-content: space-between; align-items: baseline;">
-              <div style="font-size: 22px; font-weight: 600; color: #1a1a1a;">dandi</div>
-              <div style="font-size: 16px; font-weight: 500; color: #8c8c8c;">August 2026</div>
-            </div>
-            <div style="font-size: 15px; color: #8c8c8c; margin-top: 4px;">iOS app · 2 weeks, solo design + build</div>
-          </div>
-        </sc-if>
-
-        <!-- WORK EXPERIENCE TAB -->
-        <sc-if value="{{isWorkTabExperience}}">
-          <div class="home-gallery">
-            <div class="cards-group">
-              <!-- MSFT -->
-              <div class="project-card" onclick="{{openMicrosoft2025}}" style="width:520px; height:320px; border-radius:12px; cursor:pointer; transition:all 0.3s cubic-bezier(0.16, 1, 0.3, 1); z-index:10; box-shadow:0 4px 12px rgba(0,0,0,0.06);">
-                <video src="assets/w365-thumbnail.mp4" autoplay loop muted playsinline style="width:100%; height:100%; object-fit:cover; border-radius:12px; display:block; pointer-events:none;"></video>
-                <div class="hover-pill hover-pill-title">Windows 365</div>
-                <div class="hover-text hover-text-date">Summer 2025</div>
-                <div class="hover-pill-tags-container">
-                  <div class="hover-pill-tag">B2B SaaS</div>
-                  <div class="hover-pill-tag">Enterprise UX</div>
-                </div>
-              </div>
-
-              <!-- UDA -->
-              <div class="project-card" onclick="{{openUDistrictVolunteers}}" style="width:520px; height:320px; border-radius:12px; cursor:pointer; transition:all 0.3s cubic-bezier(0.16, 1, 0.3, 1); z-index:11; box-shadow:0 4px 12px rgba(0,0,0,0.06);">
-                <img src="assets/uda_dashboard.png" style="width:100%; height:100%; object-fit:cover; border-radius:12px; display:block; pointer-events:none;">
-                <div class="hover-pill hover-pill-title">U-District Advocates</div>
-                <div class="hover-text hover-text-date">Winter 2026</div>
-                <div class="hover-pill-tags-container">
-                  <div class="hover-pill-tag">B2B SaaS</div>
-                  <div class="hover-pill-tag">Web Design</div>
+                <div style="display: flex; gap: 8px; align-items: center;">
+                  <div style="background: #f2f2f2; color: #666; font-size: 13px; padding: 4px 10px; border-radius: 4px;">Startup</div>
+                  <div style="background: #f2f2f2; color: #666; font-size: 13px; padding: 4px 10px; border-radius: 4px;">2024</div>
                 </div>
               </div>
             </div>
+
+            <!-- 2. MICROSOFT 2025 -->
+            <div style="display: flex; flex-direction: column; gap: 12px; cursor: pointer; transition: transform 0.2s ease;" onclick="{{openMicrosoft2025}}" onmouseover="this.style.transform='scale(0.98)';" onmouseout="this.style.transform='scale(1)';">
+              <div style="width: 100%; aspect-ratio: 16/10; border-radius: 12px; border: 1px solid #eaeaea; overflow: hidden; background: #f7f7f7;">
+                <video src="assets/w365-thumbnail.mp4" autoplay loop muted playsinline style="width:100%; height:100%; object-fit:cover; display:block; pointer-events:none;"></video>
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: center; font-family: 'Switzer', sans-serif;">
+                <div style="display: flex; gap: 8px; align-items: center;">
+                  <div style="background: #0078d4; color: #fff; font-size: 13px; font-weight: 500; padding: 4px 10px; border-radius: 4px;">Microsoft</div>
+                  <div style="color: #8c8c8c; font-size: 14px;">Windows 365</div>
+                </div>
+                <div style="display: flex; gap: 8px; align-items: center;">
+                  <div style="background: #f2f2f2; color: #666; font-size: 13px; padding: 4px 10px; border-radius: 4px;">Enterprise UX</div>
+                  <div style="background: #f2f2f2; color: #666; font-size: 13px; padding: 4px 10px; border-radius: 4px;">2025</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3. U-DISTRICT ADVOCATES -->
+            <div style="display: flex; flex-direction: column; gap: 12px; cursor: pointer; transition: transform 0.2s ease;" onclick="{{openUDistrictVolunteers}}" onmouseover="this.style.transform='scale(0.98)';" onmouseout="this.style.transform='scale(1)';">
+              <div style="width: 100%; aspect-ratio: 16/10; border-radius: 12px; border: 1px solid #eaeaea; overflow: hidden; background: #f7f7f7;">
+                <img src="assets/uda_dashboard.png" style="width:100%; height:100%; object-fit:cover; display:block; pointer-events:none;">
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: center; font-family: 'Switzer', sans-serif;">
+                <div style="display: flex; gap: 8px; align-items: center;">
+                  <div style="background: #3b2c65; color: #fff; font-size: 13px; font-weight: 500; padding: 4px 10px; border-radius: 4px;">U-District</div>
+                  <div style="color: #8c8c8c; font-size: 14px;">Directory app</div>
+                </div>
+                <div style="display: flex; gap: 8px; align-items: center;">
+                  <div style="background: #f2f2f2; color: #666; font-size: 13px; padding: 4px 10px; border-radius: 4px;">Academic</div>
+                  <div style="background: #f2f2f2; color: #666; font-size: 13px; padding: 4px 10px; border-radius: 4px;">2024</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 4. MICROSOFT 2024 -->
+            <div style="display: flex; flex-direction: column; gap: 12px; cursor: pointer; transition: transform 0.2s ease;" onmouseover="this.style.transform='scale(0.98)';" onmouseout="this.style.transform='scale(1)';">
+              <div style="width: 100%; aspect-ratio: 16/10; border-radius: 12px; border: 1px solid #eaeaea; overflow: hidden; background: #f7f7f7; display: flex; align-items: center; justify-content: center;">
+                <div style="color: #8c8c8c; font-family: 'Switzer', sans-serif; font-size: 14px;">MSFT 2024 Placeholder</div>
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: center; font-family: 'Switzer', sans-serif;">
+                <div style="display: flex; gap: 8px; align-items: center;">
+                  <div style="background: #0078d4; color: #fff; font-size: 13px; font-weight: 500; padding: 4px 10px; border-radius: 4px;">Microsoft</div>
+                  <div style="color: #8c8c8c; font-size: 14px;">Product Design</div>
+                </div>
+                <div style="display: flex; gap: 8px; align-items: center;">
+                  <div style="background: #f2f2f2; color: #666; font-size: 13px; padding: 4px 10px; border-radius: 4px;">Internship</div>
+                  <div style="background: #f2f2f2; color: #666; font-size: 13px; padding: 4px 10px; border-radius: 4px;">2024</div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </sc-if>
 
