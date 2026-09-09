@@ -1102,58 +1102,25 @@ window.addEventListener('load', () => {
 <div style="background:#ffffff;min-height:100vh;font-family:'Switzer','Switzer',sans-serif;color:#1a1a1a; overflow-x: hidden;">
 
   <!-- ===== NAV ===== -->
-  <nav style="position:sticky;top:0;z-index:20;background:rgba(255,255,255,0.82);backdrop-filter:blur(10px); transition: all 0.3s ease;">
-    <div style="max-width:1600px;margin:0 auto;padding:24px 7% 16px;display:flex;align-items:center;justify-content:space-between; position:relative;">
-      
-      <!-- LEFT: Logo -->
-      <div style="cursor:pointer;display:flex;align-items:center;" onclick="{{changePageWork}}">
-        <span style="font-size: 24px; font-weight: 500; color: #1a1a1a; letter-spacing: -0.5px;">maansi</span>
-      </div>
-
-      <!-- RIGHT: Links -->
-      <div class="desktop-nav" style="display:flex;align-items:center;gap:32px;font-size:17px;">
-        <span style="cursor:pointer;" onclick="{{changePageWork}}">
-          <sc-if value="{{isWork}}">
-            <span class="nav-item-active">Work</span>
-          </sc-if>
-          <sc-if value="{{!isWork}}">
-            <span class="nav-item-link">Work</span>
-          </sc-if>
-        </span>
-
-        <span style="cursor:pointer;" onclick="{{changePagePlay}}">
-          <sc-if value="{{isPlay}}">
-            <span class="nav-item-active">Play</span>
-          </sc-if>
-          <sc-if value="{{!isPlay}}">
-            <span class="nav-item-link">Play</span>
-          </sc-if>
-        </span>
-
-        <span style="cursor:pointer;" onclick="{{changePageAbout}}">
-          <sc-if value="{{isAbout}}">
-            <span class="nav-item-active">About</span>
-          </sc-if>
-          <sc-if value="{{!isAbout}}">
-            <span class="nav-item-link">About</span>
-          </sc-if>
-        </span>
-      </div>
-
-      <!-- RIGHT: Mobile Hamburger -->
-      <div class="mobile-menu-btn" onclick="document.getElementById('mobileNavOverlay').classList.add('open');" style="cursor:pointer; display:none; align-items:center;">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-      </div>
+  <nav style="position:fixed; bottom: 40px; left: 50%; transform: translateX(-50%); z-index:9999; background:rgba(255,255,255,0.85); backdrop-filter:blur(24px); -webkit-backdrop-filter:blur(24px); border:1px solid rgba(0,0,0,0.06); border-radius: 40px; padding: 14px 28px; display:flex; align-items:center; gap: 32px; box-shadow: 0 12px 48px rgba(0,0,0,0.12);">
+    <!-- Home -->
+    <a href="/" onclick="{{changePageWork}}" style="color: #666; transition: all 0.2s ease; display: flex;" onmouseover="this.style.color='#000'; this.style.transform='translateY(-2px)';" onmouseout="this.style.color='#666'; this.style.transform='translateY(0)';">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+    </a>
+    
+    <!-- Work -->
+    <div style="cursor:pointer; color: #666; transition: all 0.2s ease; display: flex;" onclick="{{changePageWork}}" onmouseover="this.style.color='#000'; this.style.transform='translateY(-2px)';" onmouseout="this.style.color='#666'; this.style.transform='translateY(0)';">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
     </div>
-
-    <!-- MOBILE OVERLAY MENU -->
-    <div id="mobileNavOverlay" class="mobile-nav-overlay">
-      <div class="mobile-close-btn" onclick="document.getElementById('mobileNavOverlay').classList.remove('open');">
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-      </div>
-      <div style="cursor:pointer; color:#1a1a1a; transition:opacity 0.2s;" onmouseover="this.style.opacity='0.6'" onmouseout="this.style.opacity='1'" onclick="{{changePageWork}}">Work</div>
-      <div style="cursor:pointer; color:#1a1a1a; transition:opacity 0.2s;" onmouseover="this.style.opacity='0.6'" onmouseout="this.style.opacity='1'" onclick="{{changePagePlay}}">Play</div>
-      <div style="cursor:pointer; color:#1a1a1a; transition:opacity 0.2s;" onmouseover="this.style.opacity='0.6'" onmouseout="this.style.opacity='1'" onclick="{{changePageAbout}}">About</div>
+    
+    <!-- Play -->
+    <div style="cursor:pointer; color: #666; transition: all 0.2s ease; display: flex;" onclick="{{changePagePlay}}" onmouseover="this.style.color='#000'; this.style.transform='translateY(-2px)';" onmouseout="this.style.color='#666'; this.style.transform='translateY(0)';">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
+    </div>
+    
+    <!-- About -->
+    <div style="cursor:pointer; color: #666; transition: all 0.2s ease; display: flex;" onclick="{{changePageAbout}}" onmouseover="this.style.color='#000'; this.style.transform='translateY(-2px)';" onmouseout="this.style.color='#666'; this.style.transform='translateY(0)';">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
     </div>
   </nav>
 
