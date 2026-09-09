@@ -1155,6 +1155,16 @@ window.addEventListener('load', () => {
   <section style="max-width:1600px;margin:0 auto;padding:96px 7% 0;">
 
     <style>
+      .feature-project-card {
+        transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+      }
+      .feature-project-card:hover {
+        transform: translateY(-4px) scale(1.015) !important;
+        box-shadow: 0 12px 32px rgba(0,0,0,0.06) !important;
+      }
+      .feature-project-card:hover .coming-soon-overlay {
+        opacity: 1 !important;
+      }
       .cards-group:hover .project-card {
         transform: scale(0.95);
       }
@@ -1427,7 +1437,7 @@ window.addEventListener('load', () => {
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; width: 100%; margin-bottom: 80px;">
             
             <!-- 1. DANDI -->
-            <div style="display: flex; flex-direction: column; gap: 16px; cursor: pointer; transition: transform 0.2s ease, box-shadow 0.2s ease; background: #ffffff; padding: 16px; border-radius: 24px; border: 1px solid rgba(0,0,0,0.04); box-shadow: 0 4px 20px rgba(0,0,0,0.02);" onclick="{{openDandi}}" onmouseover="this.style.transform='translateY(-4px) scale(1.015)'; this.style.boxShadow='0 12px 32px rgba(0,0,0,0.06)';" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 4px 20px rgba(0,0,0,0.02)';">
+            <div class="feature-project-card" style="display: flex; flex-direction: column; gap: 16px; cursor: pointer; background: #ffffff; padding: 16px; border-radius: 24px; border: 1px solid rgba(0,0,0,0.04); box-shadow: 0 4px 20px rgba(0,0,0,0.02);" onclick="{{openDandi}}">
               <div style="width: 100%; aspect-ratio: 16/10; border-radius: 16px; border: 1px solid rgba(0,0,0,0.04); overflow: hidden; background: #f7f7f7;">
                 <img src="assets/dandi_thumbnail.png" style="width:100%; height:100%; object-fit:cover; display:block; pointer-events:none;">
               </div>
@@ -1444,7 +1454,7 @@ window.addEventListener('load', () => {
             </div>
 
             <!-- 2. MICROSOFT 2025 -->
-            <div style="display: flex; flex-direction: column; gap: 16px; cursor: pointer; transition: transform 0.2s ease, box-shadow 0.2s ease; background: #ffffff; padding: 16px; border-radius: 24px; border: 1px solid rgba(0,0,0,0.04); box-shadow: 0 4px 20px rgba(0,0,0,0.02);" onclick="{{openMicrosoft2025}}" onmouseover="this.style.transform='translateY(-4px) scale(1.015)'; this.style.boxShadow='0 12px 32px rgba(0,0,0,0.06)';" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 4px 20px rgba(0,0,0,0.02)';">
+            <div class="feature-project-card" style="display: flex; flex-direction: column; gap: 16px; cursor: pointer; background: #ffffff; padding: 16px; border-radius: 24px; border: 1px solid rgba(0,0,0,0.04); box-shadow: 0 4px 20px rgba(0,0,0,0.02);" onclick="{{openMicrosoft2025}}">
               <div style="width: 100%; aspect-ratio: 16/10; border-radius: 16px; border: 1px solid rgba(0,0,0,0.04); overflow: hidden; background: #f7f7f7;">
                 <img src="assets/msft25_thumbnail.png" style="width:100%; height:100%; object-fit:cover; display:block; pointer-events:none;">
               </div>
@@ -1461,7 +1471,7 @@ window.addEventListener('load', () => {
             </div>
 
             <!-- 3. U-DISTRICT ADVOCATES -->
-            <div style="display: flex; flex-direction: column; gap: 16px; cursor: pointer; transition: transform 0.2s ease, box-shadow 0.2s ease; background: #ffffff; padding: 16px; border-radius: 24px; border: 1px solid rgba(0,0,0,0.04); box-shadow: 0 4px 20px rgba(0,0,0,0.02);" onclick="{{openUDistrictVolunteers}}" onmouseover="this.style.transform='translateY(-4px) scale(1.015)'; this.style.boxShadow='0 12px 32px rgba(0,0,0,0.06)';" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 4px 20px rgba(0,0,0,0.02)';">
+            <div class="feature-project-card" style="display: flex; flex-direction: column; gap: 16px; cursor: pointer; background: #ffffff; padding: 16px; border-radius: 24px; border: 1px solid rgba(0,0,0,0.04); box-shadow: 0 4px 20px rgba(0,0,0,0.02);" onclick="{{openUDistrictVolunteers}}">
               <div style="width: 100%; aspect-ratio: 16/10; border-radius: 16px; border: 1px solid rgba(0,0,0,0.04); overflow: hidden; background: #f7f7f7;">
                 <img src="assets/udist_thumbnail.png" style="width:100%; height:100%; object-fit:cover; display:block; pointer-events:none;">
               </div>
@@ -1478,7 +1488,7 @@ window.addEventListener('load', () => {
             </div>
 
             <!-- 4. MICROSOFT 2024 -->
-            <div style="display: flex; flex-direction: column; gap: 16px; cursor: pointer; transition: transform 0.2s ease, box-shadow 0.2s ease; background: #ffffff; padding: 16px; border-radius: 24px; border: 1px solid rgba(0,0,0,0.04); box-shadow: 0 4px 20px rgba(0,0,0,0.02);" onmouseover="this.style.transform='translateY(-4px) scale(1.015)'; this.style.boxShadow='0 12px 32px rgba(0,0,0,0.06)'; if(this.querySelector('.coming-soon-overlay')) this.querySelector('.coming-soon-overlay').style.opacity='1';" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 4px 20px rgba(0,0,0,0.02)'; if(this.querySelector('.coming-soon-overlay')) this.querySelector('.coming-soon-overlay').style.opacity='0';">
+            <div class="feature-project-card" style="display: flex; flex-direction: column; gap: 16px; cursor: pointer; background: #ffffff; padding: 16px; border-radius: 24px; border: 1px solid rgba(0,0,0,0.04); box-shadow: 0 4px 20px rgba(0,0,0,0.02);">
               <div style="width: 100%; aspect-ratio: 16/10; border-radius: 16px; border: 1px solid rgba(0,0,0,0.04); overflow: hidden; background: #f7f7f7; position: relative;">
                 <img src="assets/msft24_thumbnail.png" style="width:100%; height:100%; object-fit:cover; display:block; pointer-events:none;">
                 <div class="coming-soon-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.2s ease; backdrop-filter: blur(2px); -webkit-backdrop-filter: blur(2px); pointer-events: none;">
