@@ -1484,12 +1484,9 @@ window.addEventListener('load', () => {
             </div>
 
             <!-- 4. MICROSOFT 2024 -->
-            <div class="feature-project-card" style="display: flex; flex-direction: column; gap: 16px; cursor: pointer; background: #ffffff; padding: 16px; border-radius: 24px; border: 1px solid rgba(0,0,0,0.04); box-shadow: 0 4px 20px rgba(0,0,0,0.02);">
+            <div class="feature-project-card" style="display: flex; flex-direction: column; gap: 16px; cursor: pointer; background: #ffffff; padding: 16px; border-radius: 24px; border: 1px solid rgba(0,0,0,0.04); box-shadow: 0 4px 20px rgba(0,0,0,0.02);" onclick="{{openMicrosoft2024}}">
               <div style="width: 100%; aspect-ratio: 16/10; border-radius: 16px; border: 1px solid rgba(0,0,0,0.04); overflow: hidden; background: #f7f7f7; position: relative;">
                 <img src="assets/msft24_thumbnail.png" style="width:100%; height:100%; object-fit:cover; display:block; pointer-events:none;">
-                <div class="coming-soon-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.2s ease; backdrop-filter: blur(2px); -webkit-backdrop-filter: blur(2px); pointer-events: none;">
-                  <div style="background: #ffffff; color: #1a1a1a; font-family: 'Switzer', sans-serif; font-size: 14px; font-weight: 500; padding: 8px 16px; border-radius: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">Coming soon</div>
-                </div>
               </div>
               <div style="display: flex; justify-content: space-between; align-items: center; font-family: 'Switzer', sans-serif;">
                 <div style="display: flex; gap: 8px; align-items: center;">
@@ -3316,6 +3313,61 @@ window.addEventListener('load', () => {
 
         
 
+
+        <!-- PROJECT: MICROSOFT 2024 -->
+        <sc-if value="{{activeProject === 'msft24'}}">
+          <div class="ms-wrapper">
+            <div class="ms-container" style="max-width: 1400px; margin: 0 auto; padding-left: 40px; padding-right: 40px; padding-bottom: 80px;">
+              
+              <div class="ms-content">
+              
+                <!-- HERO -->
+                <div class="ms-section" style="padding: 120px 0 40px 0; margin: 0; max-width: 100%;">
+                  
+                  <div style="width: 100%;">
+                    <!-- Metadata Grid -->
+                    <div style="display:flex; flex-wrap: wrap; gap: 80px; border-bottom:1px solid #ECECEC; padding-bottom:32px; margin-bottom:40px;">
+                      <div>
+                        <div class="modal-meta-label">Role</div>
+                        <div class="modal-meta-value">Visual & UI Design Intern</div>
+                      </div>
+                      <div>
+                        <div class="modal-meta-label">Org</div>
+                        <div class="modal-meta-value">Windows & Devices Visual Design</div>
+                      </div>
+                      <div style="flex: 1; min-width: 300px; max-width: 600px;">
+                        <div class="modal-meta-label">Team</div>
+                        <div class="modal-meta-value" style="font-size:14px; line-height:1.5; color:#5e5e5e;">
+                          <div>2 UI Designers, 1 Art Director, 1 Storyboard Artist, 3 Producers, 3 Motion Designers</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- Introduction Text -->
+                  <h1 class="ms-hero-heading" style="margin-top: 20px; font-weight: 600; letter-spacing: -0.5px;">Campaign assets for Windows + Devices</h1>
+                  <p class="ms-body" style="font-size: 16px; line-height: 1.6; color: #4a4a4a; max-width: 100%;">I supported fast-moving Windows & Devices campaigns by jumping in wherever design support was needed, often working on quick-turnaround requests across multiple launches. I created and prepared visual assets for production while adapting quickly to shifting priorities and tight timelines.</p>
+                  
+                  <div style="margin-top: 40px; margin-bottom: 40px; display: grid; grid-template-columns: 1fr 1fr 320px; gap: 32px; align-items: start;">
+                    <iframe src="https://www.behance.net/embed/project/201512695?tracking_source=project_share" width="100%" height="500" allowfullscreen lazyload frameborder="0" allow="clipboard-write" refererPolicy="strict-origin-when-cross-origin" style="border-radius: 16px; border: 1px solid rgba(0,0,0,0.04); background: #f7f7f7; box-shadow: 0 8px 24px rgba(0,0,0,0.04);"></iframe>
+                    <iframe src="https://www.behance.net/embed/project/209160741?tracking_source=project_share" width="100%" height="500" allowfullscreen lazyload frameborder="0" allow="clipboard-write" refererPolicy="strict-origin-when-cross-origin" style="border-radius: 16px; border: 1px solid rgba(0,0,0,0.04); background: #f7f7f7; box-shadow: 0 8px 24px rgba(0,0,0,0.04);"></iframe>
+                    <div style="padding-top: 8px;">
+                      <h3 style="font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: #1a1a1a; margin-bottom: 16px;">My Contributions</h3>
+                      <ul style="padding-left: 20px; font-size: 16px; line-height: 1.6; color: #4a4a4a; margin: 0; display: flex; flex-direction: column; gap: 12px;">
+                        <li><strong>Designed feature-moment UI in Figma</strong>, translating campaign guidelines into individual product screens for each launch.</li>
+                        <li><strong>Prepared UI and visual assets</strong> for animation handoff using Photoshop, Illustrator, and After Effects, jumping in across tools as needed to meet quick turnaround times.</li>
+                        <li><strong>Sourced and selected imagery</strong> through Adobe to support storytelling and match each campaign’s creative direction.</li>
+                      </ul>
+                    </div>
+                  </div>
+                  
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </sc-if>
+
       </div>
     </div>
   </div>
@@ -3451,6 +3503,7 @@ class Component extends DCLogic {
 
       openWhereYouGo: () => this.openProject('where-you-go'),
       openMicrosoft2025: () => this.openProject('microsoft-2025'),
+      openMicrosoft2024: () => this.openProject('msft24'),
       openDroppit: () => this.openProject('droppit'),
       openSmartCart: () => this.openProject('smartcart'),
       openUDistrictVolunteers: () => this.openProject('uda'),
